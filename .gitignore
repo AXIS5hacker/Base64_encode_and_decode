@@ -11,6 +11,7 @@
 /base64_en/build
 /out
 /ipch
+/Debug
 *.txt
 *.base64
 *.b64decode
