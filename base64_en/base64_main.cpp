@@ -11,7 +11,7 @@
 
 using namespace std;
 const char* const InvalidLengthException::msg= "Invalid Bitstream Length, should be a multiple of 6.";
-char m[600000];
+//char m[600000];
 //string bcode = "", b64c = "";
 extern const string dict = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 //extern int detectcode(string filename);

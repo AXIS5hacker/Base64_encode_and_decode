@@ -87,7 +87,7 @@ string b64c = "";//b64c is the final base64 code of a single block
 //}
 
 //get a byte
-string single_byte(char c) {				
+static string single_byte(char c) noexcept {				
 	int vl = c;
 	string en;
 	char b[9] = "";
@@ -101,7 +101,7 @@ string single_byte(char c) {
 }
 
 //get a 6-bit
-string bit6(int v) {											
+static string bit6(int v) noexcept {
 	string en;
 	char b[7] = "";
 	for (int i = 1; i <= 6; i++) {
@@ -115,7 +115,7 @@ string bit6(int v) {
 /**
 * Encode to base64 by block
 */
-string blk_encode(char blk[],int size) {
+static string blk_encode(char blk[],int size) throw (InvalidLengthException) {
 	string byte = "", block_bitstring = "", block_b64string = "";
 	//get bit stream
 	for (int i = 0; i < size; i++) {
@@ -157,7 +157,7 @@ string blk_encode(char blk[],int size) {
 /** 
 * Encoding function
 */
-void encd(ifstream& fin,ofstream &fout) {
+void encd(ifstream& fin,ofstream &fout) throw (InvalidLengthException){
 	//CN2Utf8(a, a);
 	//printf("%d ",strlen(a));
 	b64c = "";

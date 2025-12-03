@@ -12,7 +12,7 @@ public:
 	InvalidLengthException() {
 		//msg = "Invalid Bitstream Length, should be a multiple of 6.";
 	}
-	const char* what() const
+	const char* what() const noexcept override
 	{
 		return msg;
 	}
