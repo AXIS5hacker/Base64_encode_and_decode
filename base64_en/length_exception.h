@@ -10,14 +10,14 @@ class InvalidLengthException : public exception
 {
 public:
 	InvalidLengthException() {
-		msg = "Invalid Bitstream Length, should be a multiple of 6.";
+		//msg = "Invalid Bitstream Length, should be a multiple of 6.";
 	}
 	const char* what() const
 	{
 		return msg;
 	}
 private:
-	const char* msg;
+	static const char* const msg;
 };
 
 #endif
